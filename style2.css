@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+}
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.header {
+  display: flex;
+  width: 1920px;
+  height: 165px;
+  background-color: #4fbfa5;
+}
+.PersonalAccount {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 150%;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+}
+.MainContainer {
+  display: flex;
+  justify-content: center;
+}
+.SupContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 1360px;
+  height: 780px;
+  background-color: white;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+.Block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 420px;
+  height: 320px;
+  background: rgb(240, 240, 240);
+}
+.SupContainer1 {
+  display: flex;
+  width: 1360px;
+  height: 320px;
+  justify-content: space-between;
+}
