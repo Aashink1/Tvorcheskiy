@@ -26,9 +26,9 @@ $link = mysqli_connect($host, $user, $password, "testing");
           if(isset($_GET['dob_id'])){
         $sql = mysqli_query($link, "SELECT id, login, email FROM t_users");
 		$result = mysqli_fetch_array($sql);
-        $date = date('Y-m-d');
-        echo '<p>{$result['id']}</p>';
-        $sql = mysqli_query($link, "INSERT INTO orders (customer_id, usl_id) VALUES ('{$result['id']}', '$usl_id')");
+        $user_id = $_SESSION['id'];
+        $usl_id = $_GET['dob_id'];
+        $sql = mysqli_query($link, "INSERT INTO orders (customer_id, usl_id) VALUES ($user_id, $usl_id)");
         if($sql){
             echo "<p>Заказ добавлен.</p>";
         } else {
@@ -48,7 +48,6 @@ $link = mysqli_connect($host, $user, $password, "testing");
     <?php 
         $sql=mysqli_query($link, "SELECT id, title, price FROM uslugi");
         while($result = mysqli_fetch_array($sql)){
-            $usl_id = $result['id'];
             echo "<tr>
                 <td>{$result['id']}</td>
                 <td>{$result['title']}</td>

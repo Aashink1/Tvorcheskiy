@@ -9,6 +9,7 @@ $sql->execute(array('email' =>$email,'password' =>$password));
 $array=$sql->fetch(PDO::FETCH_ASSOC);
 if($array["id"]>0){
     $_SESSION['email']=$array["email"];
+    $_SESSION['id']=$array['id'];
     header('Location: ../index.php');
 }
 else{
