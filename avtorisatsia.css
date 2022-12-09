@@ -162,3 +162,10 @@ a.button {
   padding-top: 25px;
   padding-bottom: 25px;
 }
+.SozdanieAkkaunta {
+  margin-top: 15px;
+  display: flex;
+}
+.RegistrLink {
+  margin-left: 8px;
+}
