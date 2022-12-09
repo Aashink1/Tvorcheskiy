@@ -1,0 +1,130 @@
+body{
+    color: #000000;
+    font: 18px Tahoma, sans-serif;
+    background-color: #e5e5e5;
+    border-top: 36px;
+    margin: 0;
+}
+#wrapper{
+    max-width: 1200px;
+    margin:auto;
+}
+header{
+    padding: 0 0;
+}
+header a{
+    text-decoration: none;
+}
+header ul{
+    margin:0;
+    padding:0;
+}
+header li{
+    list-style-position: inside;
+    font: 16px 'PT Sans', sans-serif;
+    padding: 10px;
+}
+.info-menu li {
+
+    display: inline-block;
+    padding: 30px 50px;
+    margin: 0;
+    border-right: 1px solid #c4c4c4;
+}
+
+Rect{
+    background: #4FBFA5;
+    color: #dbdbdb;
+    font-size: 14px;
+}
+Rect a{
+    text-decoration: none;
+}
+Rect ul{
+    margin: 0;
+    padding:0;
+}
+#Rect{
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 0;
+    background: #4FBFA5;
+    height: auto;
+}
+.work-menu li{
+    display: inline-block;
+    padding: 10px 80px;
+    margin: 0;
+}
+.work-menu li > a{
+    list-style-type: inside;
+    font: 17px 'PT Sans', sans-serif;
+    padding:10px;
+}
+
+.advert li > h1{
+    color: #FFFFFF;
+    font-weight: 700;
+    font: 48px 'PT Sans', sans-serif;
+}
+
+#sales{
+    margin: 0 170px;
+    width: 500px;
+    height: 400px;
+    background-color: #e5e5e5;
+}
+.sidenav{
+    height: 100%;
+    width:180px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a{
+    padding: 6px 8px 6px 16px;
+    text-decoration:none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+@media screen and (max-height: 450px){
+    .sidenav{padding-top: 15px;}
+    .sidenav a{font-size: 18px;}
+}
+
+.table{
+    position: relative;
+    width: 50px;
+    height: 5px;
+    margin:auto;
+    background: white;
+    color:white;
+    border-spacing: 1px;
+}
+.td, .th{
+    background: rgb(113, 231, 92);
+    padding: 500px;
+    font-size: 14px;
+}
+.tab{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 200px;
+    margin-left: 180px;
+
+}
+.tab > l{
+align-items: center;
+}
