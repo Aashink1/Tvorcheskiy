@@ -19,6 +19,8 @@
         <a href="admin/contact.php">Контакты</a>
         <a href="admin/uslugi.php">Услуги</a>
 		<a href="autoriz/users.php">Пользователи</a>
+		<a href="admin/orders.php">Заказы</a>
+		<a href="admin/emp.php">Работники</a>
         <a href="../logout.php">Выйти</a>
 
     </div>

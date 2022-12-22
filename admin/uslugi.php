@@ -48,6 +48,8 @@
         <a href="contact.php">Контакты</a>
         <a href="uslugi.php">Услуги</a>
         <a href="../autoriz/users.php">Пользователи</a>
+        <a href="orders.php">Заказы</a>
+        <a href="emp.php">Работники</a>
         <a href="../admin.php">Вернуться</a>
         <a href="../logout.php">Выйти</a>
 

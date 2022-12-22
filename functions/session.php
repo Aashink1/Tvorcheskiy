@@ -1,8 +1,8 @@
-<?php require_once "connection.php";?>
+<?php require_once "connect.php";?>
 <?php session_start();?>
 <?php
 $email=$_POST["email"];
-$password=$_POST["password"];
+$password=md5($_POST["password"]);
 
 $sql = $pdo->prepare("SELECT id FROM t_users WHERE email=:email AND password=:password");
 $sql->execute(array('email' =>$email,'password' =>$password));
@@ -13,5 +13,5 @@ if($array["id"]>0){
     header('Location: ../index.php');
 }
 else{
-    header('Location:/autoriz/login.php');
+    header('Location:../autoriz/login.php');
 }

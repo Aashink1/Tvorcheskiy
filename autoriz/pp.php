@@ -40,7 +40,6 @@ $link = mysqli_connect($host, $user, $password, "testing");
      <l>Таблица услуг</l>
          <br>
             <tr>
-                <td>Идентификатор</td>
                 <td>Наименование</td>
                 <td>Цена</td>
                 <td>Приобрести</td>
@@ -49,7 +48,6 @@ $link = mysqli_connect($host, $user, $password, "testing");
         $sql=mysqli_query($link, "SELECT id, title, price FROM uslugi");
         while($result = mysqli_fetch_array($sql)){
             echo "<tr>
-                <td>{$result['id']}</td>
                 <td>{$result['title']}</td>
                 <td>{$result['price']} ₽</td>
                 <td><a href='?dob_id={$result['id']}'>Выбрать</a></td>

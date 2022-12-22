@@ -5,8 +5,6 @@ $link=mysqli_connect($host, $user, $password,"testing");
 
 if(isset($_POST['submit']))
 {
-
-
     if(!preg_match("/^[a-zA-Z0-9]+$/",$_POST['login'])){
         $err[] = "Логин может состоять только из букв английского алфавита и цифр";
     }
@@ -25,6 +23,7 @@ if(isset($_POST['submit']))
     if(!$query || mysqli_num_rows($query)>0){
         $err[] = "Эта почта уже занята другим аккаунтом";
     }
+    
     if($_POST['password']!==$_POST['repeat_password']){
         $err[] = "Пароли не совпадают";
     }
@@ -32,7 +31,7 @@ if(isset($_POST['submit']))
     if(count($err) == 0){
         $login = $_POST['login'];
 
-        $password = trim($_POST['password']);
+        $password = md5(trim($_POST['password']));
 
         $email = $_POST['email'];
 
