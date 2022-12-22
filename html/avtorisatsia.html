@@ -15,29 +15,29 @@
   </head>
   <body>
     <main>
-    <form action="../functions/session.php" method="post">
       <div class="circle"></div>
-      <div class="register-form-container">
-        <h1 class="form-title">Авторизация</h1>
-        <div class="form-fields">
-          <div class="form-field">
-            <input type="email" placeholder="Почта" name="email" />
+      <form action="../functions/session.php" method="post"></form>
+        <div class="register-form-container">
+          <h1 class="form-title">Авторизация</h1>
+          <div class="form-fields">
+            <div class="form-field">
+               <input type="email" placeholder="Почта" name="email" />
+            </div>
+            <div class="form-field">
+               <input type="password" placeholder="Пароль" name="password" />
+            </div>
           </div>
-          <div class="form-field">
-            <input type="password" placeholder="Пароль" name="password" />
+          <div class="form-buttons">
+             <button class="button" type="submit" name="submit">Войти</button>
+            <div class="divider">или</div>
+            <a href="#" class="button button-google">Google</a>
+           </div>
+          <div class="SozdanieAkkaunta">
+           <p class="NetAkkaunta">Нет аккаунта?</p>
+            <a href="register.php" class="RegistrLink">Зарегистрироваться</a>
           </div>
         </div>
-        <div class="form-buttons">
-          <button class="button" type="submit" name="submit">Войти</button>
-          <div class="divider">или</div>
-          <a href="#" class="button button-google">Google</a>
-        </div>
-        <div class="SozdanieAkkaunta">
-          <p class="NetAkkaunta">Нет аккаунта?</p>
-          <a href="register.php" class="RegistrLink">Зарегистрироваться</a>
-        </div>
-      </div>
-    </form>
+      </form>
     </main>
   </body>
 </html>
