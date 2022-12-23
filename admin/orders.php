@@ -40,15 +40,32 @@
 			<td>Номер заказа</td>
 			<td>Имя заказчика</td>
 			<td>Название услуги</td>
+			<td>Выполненность</td>
 		</tr>
     	<?php
-			$sql = mysqli_query($link, "SELECT orders.id, t_users.login, uslugi.title FROM orders, t_users, uslugi WHERE t_users.id = orders.customer_id and uslugi.id = orders.usl_id");
+			$sql = mysqli_query($link, "SELECT orders.id, t_users.login, uslugi.title, orders.completion FROM orders, t_users, uslugi WHERE t_users.id = orders.customer_id and uslugi.id = orders.usl_id");
 			while($result = mysqli_fetch_array($sql)){
 				echo "<tr>
 					<td>{$result['id']}</td>
 					<td>{$result['login']}</td>
 					<td>{$result['title']}</td>
+					<td><form action='' method='GET'>
+					<select name='value' size='1' multiple>";
+					if($result['completion']==0){
+						echo"<option value='0'>Не выполнено</option>;
+							<option value='1'>Выполнено</option>";
+					}
+					else
+						echo"<option value='1'>Выполнено</option>;
+							<option value='0'>Не выполнено</option>";
+					echo "</select>
+					<input type='submit' value='Изменить'/>
+					</form>
+					</td>
 					</tr>";
+			}
+			if($_GET['value']==='1'){
+				header('Location:/emp.php');
 			}
 		?>
 	</table>

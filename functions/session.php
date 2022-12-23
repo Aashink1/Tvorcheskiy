@@ -1,4 +1,4 @@
-<?php require_once "connect.php";?>
+<?php require_once "connection.php";?>
 <?php session_start();?>
 <?php
 $email=$_POST["email"];

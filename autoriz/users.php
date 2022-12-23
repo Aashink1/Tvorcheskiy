@@ -12,11 +12,6 @@
 	<?php
 	$link = mysqli_connect($host, $user, $password, "testing");
 	?>
-
-
-
-
-
 	<div style="text-align:center">
 	
 	<?php if(!empty($_SESSION["login"])) :?>

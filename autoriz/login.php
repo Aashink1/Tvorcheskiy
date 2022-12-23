@@ -16,10 +16,10 @@
   </head>
   <body>
     <main>
-    <form action="../functions/session.php" method="post">
       <div class="circle"></div>
       <div class="register-form-container">
         <h1 class="form-title">Авторизация</h1>
+        <form action="../functions/session.php" method="post">
         <div class="form-fields">
           <div class="form-field">
             <input type="email" placeholder="Почта" name="email" />
@@ -33,12 +33,12 @@
           <div class="divider">или</div>
           <a href="#" class="button button-google">Google</a>
         </div>
+        </form>
         <div class="SozdanieAkkaunta">
           <p class="NetAkkaunta">Нет аккаунта?</p>
           <a href="register.php" class="RegistrLink">Зарегистрироваться</a>
         </div>
       </div>
-    </form>
     </main>
   </body>
 </html>

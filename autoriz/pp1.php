@@ -24,35 +24,28 @@ $link = mysqli_connect($host, $user, $password, "testing");
         <div class="SupContainer">
           <div class="SupContainer1">
           <div class='tab'>
-    <?php
-          if(isset($_GET['dob_id'])){
-        $sql = mysqli_query($link, "SELECT id, login, email FROM t_users");
-		$result = mysqli_fetch_array($sql);
-        $user_id = $_SESSION['id'];
-        $usl_id = $_GET['dob_id'];
-        $sql = mysqli_query($link, "INSERT INTO orders (customer_id, usl_id, createdAt) VALUES ($user_id, $usl_id, NOW())");
-        if($sql){
-            echo "<p>Заказ добавлен.</p>";
-        } else {
-            echo '<p>Произошла ошибка: '.mysqli_error($link).'</p>';
-        }
-    }
-    ?>
         <table border='1' >
-     <l>Таблица услуг</l>
+     <l>Ваши заказы</l>
          <br>
             <tr>
-                <td>Наименование</td>
+                <td>Наименование заказа</td>
                 <td>Цена</td>
-                <td>Приобрести</td>
+                <td>Состояние заказа</td>
             </tr>
     <?php 
-        $sql=mysqli_query($link, "SELECT id, title, price FROM uslugi");
+        $user_id = $_SESSION['id'];
+        $sql=mysqli_query($link, "SELECT uslugi.id, uslugi.title, uslugi.price, orders.completion FROM uslugi, orders WHERE orders.customer_id = $user_id and uslugi.id = orders.usl_id");
         while($result = mysqli_fetch_array($sql)){
             echo "<tr>
                 <td>{$result['title']}</td>
-                <td>{$result['price']} ₽</td>
-                <td><a href='?dob_id={$result['id']}'>Выбрать</a></td>
+                <td>{$result['price']} ₽</td>";
+                if ($result['completion'] == 1)
+                {
+                    echo"
+                <td>Выполнен</td>";
+                }
+                else echo"
+                <td>Не выполнен</td>
                 </tr>";
         }
     ?>

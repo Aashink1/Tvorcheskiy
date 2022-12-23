@@ -9,6 +9,11 @@
     <title>Услуги</title>
 </head>
 <body>
+    <script type="text/javascript">
+        function confirmation() {
+        return confirm('Вы уверены, что хотите сделать это?\n(В случае удаления могут произойти необратимые последствия)');
+        }
+    </script>
     <?php
     $link = mysqli_connect($host, $user, $password, $db);
     
@@ -28,6 +33,7 @@
     }
 
     if(isset($_GET['del_id'])){
+
         $sql = mysqli_query($link, "DELETE FROM uslugi WHERE id = {$_GET['del_id']}");
         if($sql){
             echo "<p>Товар удален.</p>";
@@ -74,7 +80,7 @@
                 <td>{$result['id']}</td>
                 <td>{$result['title']}</td>
                 <td>{$result['price']} ₽</td>
-                <td><a href='?del_id={$result['id']}'>Удалить</a></td>
+                <td><a href='?del_id={$result['id']}' onclick='return confirmation()'>Удалить</a></td>
                 <td><a href='?red_id={$result['id']}'>Изменить</a></td>
                 </tr>";
         }
@@ -103,5 +109,6 @@
         echo '<a href="/login.php">На главную</a>';
         ?>
     <?php endif ?>
+
 </body>
 </html>

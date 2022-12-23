@@ -51,5 +51,52 @@ if(isset($_POST['submit']))
         }
     }
 }
-include "../html/registratsia.html";
 ?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/registr.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+  <form action="" method="post">
+    <main>
+      <div class="circle"></div>
+      <div class="register-form-container">
+        <h1 class="form-title">Регистрация</h1>
+        <div class="form-fields">
+          <div class="form-field">
+            <input type="text" placeholder="Имя" name="login" />
+          </div>
+          <div class="form-field">
+            <input type="email" placeholder="Почта" name="email" />
+          </div>
+          <div class="form-field">
+            <input type="password" placeholder="Пароль" name="password" />
+          </div>
+          <div class="form-field">
+            <input type="password" placeholder="Подтвердить пароль" name="repeat_password" />
+          </div>
+        </div>
+        <div class="form-buttons">
+          <button type="submit" class="button" name="submit">Регистрация</button>
+          <div class="divider">или</div>
+          <a href="#" class="button button-google">Google</a>
+        </div>
+      </div>
+    </main>
+  </form>
+  </body>
+</html>
